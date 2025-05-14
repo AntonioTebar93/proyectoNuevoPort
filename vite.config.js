@@ -10,5 +10,7 @@ export default defineConfig({
     alias: {
       "@": path.resolve(__dirname, "./src"),
     }
-  }
+  },
+  // Configuración para GitHub Pages
+  base: '/proyectoNuevoPort/', // Reemplaza 'mi-proyecto' con el nombre de tu repositorio
 })
