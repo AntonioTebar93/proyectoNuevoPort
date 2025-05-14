@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #000000;
+  --color-foreground: #00FF00; /* Verde eléctrico */
+
+  --animate-matrix-fall: matrix-fall 1.2s linear infinite;
+
+  @keyframes matrix-fall {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    30% {
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100vh);
+      opacity: 0;
+    }
+  }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 120 100% 50%; /* Verde eléctrico para todo el texto */
+  }
+
+  .dark {
+    --background: 0 0% 0%;
+    --foreground: 120 100% 50%; /* Verde eléctrico */
+  }
+
+  body {
+    @apply bg-background text-foreground font-mono transition-colors duration-300;
+  }
+}
+
+@utility matrix-symbol {
+  @apply absolute text-[20px] font-bold;
+  color: hsl(var(--foreground)); /* Esto aplica el verde eléctrico */
+  animation: var(--animate-matrix-fall);
+}
