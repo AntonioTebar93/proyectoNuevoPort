@@ -64,7 +64,7 @@ export const SkillsSection = () => {
 
   return (
     <section id="skills" className="py-30 px-4 relative bg-secondary/30">
-      <div className="pt-8 pb-25 container mx-auto max-w-6xl">
+      <div className="pt-8 pb-30 container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           Mis <span className="text-primary">Habilidades</span>
         </h2>

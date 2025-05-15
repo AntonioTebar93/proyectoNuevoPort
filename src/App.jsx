@@ -12,7 +12,7 @@ function App() {
   const [count, setCount] = useState(0); // puedes eliminar esto si no lo usas
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/proyectoNuevoPort">
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />

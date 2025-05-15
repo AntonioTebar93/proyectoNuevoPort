@@ -2,20 +2,20 @@ import { Briefcase, Code, User, Shield } from "lucide-react";
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="pt-50 pb-10 px-4 relative snap-start min-h-screen">
+    <section id="about" className="pt-45 pb-30 px-4 relative snap-start min-h-screen">
       <div className="pt-0 container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           Sobre <span className="text-primary">mí</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="space-y-6">
+          <div className="space-y-12">
             <h3 className="text-2xl font-semibold">
-              Desarrollador Full Stack & Apasionado por la Tecnología
+              Desarrollador Full Stack 
             </h3>
 
             <p className="text-muted-foreground">
-              Soy desarrollador full stack con experiencia en la creación de aplicaciones web modernas, escalables y seguras. Utilizo tecnologías como React y Symfony, así como bases de datos como MySQL y PostgreSQL y despliegues con Docker.
+              Tengo experiencia en la creación de aplicaciones web modernas, escalables y seguras. Utilizo tecnologías como React y Symfony, así como bases de datos como MySQL y PostgreSQL y despliegues con Docker.
             </p>
 
             <p className="text-muted-foreground">

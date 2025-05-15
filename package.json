@@ -8,8 +8,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",  // Construye el proyecto antes de desplegar
-    "deploy": "gh-pages -d dist"   // Sube la carpeta 'dist' a la rama 'gh-pages'
+    "predeploy": "npm run build",  
+    "deploy": "gh-pages -d dist"  
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
