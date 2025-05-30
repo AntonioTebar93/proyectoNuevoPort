@@ -353,3 +353,28 @@
     animation: bounce 0.8s infinite;
   }
 }
+
+.wh {
+  position: fixed;
+  bottom: 30px;
+  right: 45px;
+  width: 70px;
+  height: 70px;
+  background-color: hsla(120, 100%, 45%, 1);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 1000;
+  cursor: pointer;
+
+  /* 👉 Nueva animación para igualar a GitHub/LinkedIn */
+  transition: transform 0.3s ease-in-out;
+}
+
+.wh:hover {
+  transform: scale(1.25); /* 👉 Mismo efecto de ampliación */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}

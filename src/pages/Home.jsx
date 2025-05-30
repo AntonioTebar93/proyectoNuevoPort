@@ -8,6 +8,8 @@ import { AboutSection } from "../components/AboutSection";
 import { SkillsSection } from "../components/SkillsSection";
 import { ProjectsSection } from "../components/ProjectsSection"
 import { useScrollToHero } from "../hooks/useScrollToHero";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 export const Home = () => {
    useScrollToHero();
@@ -65,6 +67,19 @@ export const Home = () => {
           <ChevronUp className="h-10 w-10 text-primary hover:drop-shadow-[0_0_6px_#00ff88]" />
         </a>
       )}
+
+        {/* Botón WhatsApp */}
+      <a
+        href="https://wa.me/34658431719"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="wh"
+        aria-label="WhatsApp"
+      >
+        <FontAwesomeIcon icon={faWhatsapp} style={{ fontSize: "44px" }} />
+      </a>
     </div>
+
+    
   );
 };

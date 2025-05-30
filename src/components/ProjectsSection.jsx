@@ -1,22 +1,30 @@
-import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
+import { FaGithub, FaYoutube, FaBookOpen } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 
 const projects = [
   {
-    title: 'Sistema de login personalizado',
-    image: '/path/to/your/image1.jpg',
-    description: 'This is a description of project 1.',
-    technologies: ['React', 'Symfony', 'Docker'],
+    title: 'Videojuego Sackboy and the Eternal Halloween Village',
+    image: 'public/Projects/Proyecto 1.png',
+    description: 'Proyecto Final de grado en Desarrollo de videojuegos, videojuego tipo plataformas',
+    technologies: ['Unity', 'C#', 'Autodesk Maya 3D'],
     githubLink: 'https://github.com/yourusername/project1',
     demoLink: 'https://yourwebsite.com/project1',
   },
   {
-    title: 'Aplicación de control de fichajes',
-    image: '/path/to/your/image2.jpg',
-    description: 'This is a description of project 2.',
-    technologies: ['Symfony', 'Twig', 'MySQL', 'Docker'],
+    title: 'Portafolio Antonio Tebar',
+    image: 'public/Projects/Proyecto 2.png',
+    description: 'Portafolio donde enseño mis progresos y proyectos realizados y contacto',
+    technologies: ['React', 'Tailwind', 'Symfony', 'HTML', 'CSS', 'JavaScript', 'PHP'],
+    githubLink: 'https://github.com/yourusername/project2',
+    demoLink: 'https://yourwebsite.com/project2',
+  },
+  {
+    title: 'Proyecto Spectral',
+    image: 'public/Projects/sintitulo2.png',
+    description: 'Aplicación de cifrado-descifrado y transferencia de archivos utilizando el algoritmo criptográfico AES-256 ',
+    technologies: ['Java', 'SQLite'],
     githubLink: 'https://github.com/yourusername/project2',
     demoLink: 'https://yourwebsite.com/project2',
   },
@@ -29,10 +37,42 @@ const projects = [
     demoLink: 'https://yourwebsite.com/project2',
   },
   {
-    title: 'Aplicación de control de fichajes',
-    image: '/path/to/your/image2.jpg',
+    title: 'Aplicación 4',
+    image: '',
+    description: 'Portafolio donde enseño mis progresos y proyectos realizados y contacto',
+    technologies: ['React', 'Tailwind', 'Symfony', 'HTML', 'CSS', 'JavaScript', 'PHP'],
+    githubLink: 'https://github.com/yourusername/project2',
+    demoLink: 'https://yourwebsite.com/project2',
+  },
+  {
+    title: 'Aplicación 5',
+    image: '',
+    description: 'Aplicación de cifrado-descifrado y transferencia de archivos utilizando el algoritmo criptográfico AES-256 ',
+    technologies: ['Java', 'SQLite'],
+    githubLink: 'https://github.com/yourusername/project2',
+    demoLink: 'https://yourwebsite.com/project2',
+  },
+  {
+    title: 'Aplicación 6',
+    image: '',
     description: 'This is a description of project 2.',
     technologies: ['Symfony', 'Twig', 'MySQL', 'Docker'],
+    githubLink: 'https://github.com/yourusername/project2',
+    demoLink: 'https://yourwebsite.com/project2',
+  },
+  {
+    title: 'Aplicación 7',
+    image: '',
+    description: 'Portafolio donde enseño mis progresos y proyectos realizados y proporciono contacto',
+    technologies: ['React', 'Tailwind', 'Symfony', 'HTML', 'CSS', 'JavaScript', 'PHP'],
+    githubLink: 'https://github.com/yourusername/project2',
+    demoLink: 'https://yourwebsite.com/project2',
+  },
+  {
+    title: 'Aplicación 8',
+    image: '',
+    description: 'Aplicación de cifrado-descifrado y transferencia de archivos utilizando el algoritmo criptográfico AES-256 ',
+    technologies: ['Java', 'SQLite'],
     githubLink: 'https://github.com/yourusername/project2',
     demoLink: 'https://yourwebsite.com/project2',
   },
@@ -136,7 +176,7 @@ export function ProjectsSection() {
                   {project.title}
                 </motion.h3>
                 <motion.p
-                  className="text-gray-600 dark:text-gray-300 mb-4"
+                  className="text-white mb-4"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
@@ -161,7 +201,7 @@ export function ProjectsSection() {
                   ))}
                 </motion.div>
                 <motion.div
-                  className="flex gap-4"
+                  className="flex flex-wrap justify-between items-center gap-3 mt-4"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
@@ -177,6 +217,7 @@ export function ProjectsSection() {
                     <FaGithub className="h-5 w-5" />
                     <span>Código</span>
                   </motion.a>
+
                   <motion.a
                     href={project.demoLink}
                     target="_blank"
@@ -185,13 +226,40 @@ export function ProjectsSection() {
                     whileHover={{ x: 5 }}
                     whileTap={{ scale: 0.95 }}
                   >
-                    <FaExternalLinkAlt className="h-5 w-5" />
-                    <span>Prueba</span>
+                    <FaYoutube className="h-5 w-5" />
+                    <span>Demo</span>
+                  </motion.a>
+
+                  <motion.a
+                    href={project.demoLink}
+                    target="_self"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 text-secondary hover:text-primary transition-colors"
+                    whileHover={{ x: 5 }}
+                    whileTap={{ scale: 0.95 }}
+                  >
+                    <FaBookOpen className="h-5 w-5" />
+                    <span>+ Info</span>
                   </motion.a>
                 </motion.div>
+
               </motion.article>
             ))}
           </motion.div>
+        </div>
+
+        <div className="flex justify-center mt-8 space-x-3">
+          {Array.from({ length: totalPages }).map((_, index) => (
+            <motion.button
+              key={index}
+              onClick={() => setCurrentPage(index)}
+              className={`w-4 h-4 rounded-full transition-all duration-300 ${index === currentPage
+                  ? 'bg-primary shadow-[0_0_8px_#00ff88]'
+                  : 'bg-primary/20'
+                }`}
+              whileHover={{ scale: 1.2 }}
+            />
+          ))}
         </div>
       </div>
     </section>
