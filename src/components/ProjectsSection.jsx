@@ -30,6 +30,30 @@ const projects = [
     githubLink: 'https://github.com/yourusername/project2',
     demoLink: 'https://yourwebsite.com/project2',
   },
+  {
+    title: 'Videojuego Sackboy and the Eternal Halloween Village',
+    image: `${baseUrl}projects/proyecto_1.png`,
+    description: 'Proyecto Final de grado en Desarrollo de videojuegos, videojuego tipo plataformas',
+    technologies: ['Unity', 'C#', 'Autodesk Maya 3D'],
+    githubLink: 'https://github.com/yourusername/project1',
+    demoLink: 'https://yourwebsite.com/project1',
+  },
+  {
+    title: 'Portafolio Antonio Tebar',
+    image: `${baseUrl}projects/proyecto_2.png`,
+    description: 'Portafolio donde enseño mis progresos y proyectos realizados y contacto',
+    technologies: ['React', 'Tailwind', 'Symfony', 'HTML', 'CSS', 'JavaScript', 'PHP'],
+    githubLink: 'https://github.com/yourusername/project2',
+    demoLink: 'https://yourwebsite.com/project2',
+  },
+  {
+    title: 'Proyecto Spectral',
+    image: `${baseUrl}projects/proyecto_3.png`,
+    description: 'Aplicación de cifrado-descifrado y transferencia de archivos utilizando el algoritmo criptográfico AES-256 ',
+    technologies: ['Java', 'SQLite'],
+    githubLink: 'https://github.com/yourusername/project2',
+    demoLink: 'https://yourwebsite.com/project2',
+  },
 ];
 
 export function ProjectsSection() {
