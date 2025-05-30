@@ -6,7 +6,7 @@ import { useState } from 'react';
 const projects = [
   {
     title: 'Videojuego Sackboy and the Eternal Halloween Village',
-    image: 'public/Projects/Proyecto 1.png',
+    image: '/projects/proyecto_1.png',
     description: 'Proyecto Final de grado en Desarrollo de videojuegos, videojuego tipo plataformas',
     technologies: ['Unity', 'C#', 'Autodesk Maya 3D'],
     githubLink: 'https://github.com/yourusername/project1',
@@ -14,7 +14,7 @@ const projects = [
   },
   {
     title: 'Portafolio Antonio Tebar',
-    image: 'public/Projects/Proyecto 2.png',
+    image: '/projects/proyecto_2.png',
     description: 'Portafolio donde enseño mis progresos y proyectos realizados y contacto',
     technologies: ['React', 'Tailwind', 'Symfony', 'HTML', 'CSS', 'JavaScript', 'PHP'],
     githubLink: 'https://github.com/yourusername/project2',
@@ -22,7 +22,7 @@ const projects = [
   },
   {
     title: 'Proyecto Spectral',
-    image: 'public/Projects/sintitulo2.png',
+    image: '/projects/proyecto_3.png',
     description: 'Aplicación de cifrado-descifrado y transferencia de archivos utilizando el algoritmo criptográfico AES-256 ',
     technologies: ['Java', 'SQLite'],
     githubLink: 'https://github.com/yourusername/project2',
@@ -30,52 +30,31 @@ const projects = [
   },
   {
     title: 'Aplicación de control de fichajes',
-    image: '/path/to/your/image2.jpg',
+    image: '/Projects/Aplicacion_4.png',  // Cambia esto si tienes imagen para la app 4
     description: 'This is a description of project 2.',
     technologies: ['Symfony', 'Twig', 'MySQL', 'Docker'],
     githubLink: 'https://github.com/yourusername/project2',
     demoLink: 'https://yourwebsite.com/project2',
   },
+
   {
-    title: 'Aplicación 4',
-    image: '',
-    description: 'Portafolio donde enseño mis progresos y proyectos realizados y contacto',
-    technologies: ['React', 'Tailwind', 'Symfony', 'HTML', 'CSS', 'JavaScript', 'PHP'],
-    githubLink: 'https://github.com/yourusername/project2',
-    demoLink: 'https://yourwebsite.com/project2',
-  },
-  {
-    title: 'Aplicación 5',
-    image: '',
-    description: 'Aplicación de cifrado-descifrado y transferencia de archivos utilizando el algoritmo criptográfico AES-256 ',
-    technologies: ['Java', 'SQLite'],
-    githubLink: 'https://github.com/yourusername/project2',
-    demoLink: 'https://yourwebsite.com/project2',
-  },
-  {
-    title: 'Aplicación 6',
-    image: '',
+    title: 'Aplicación de control de fichajes',
+    image: '/Projects/Aplicacion_4.png',  // Cambia esto si tienes imagen para la app 4
     description: 'This is a description of project 2.',
     technologies: ['Symfony', 'Twig', 'MySQL', 'Docker'],
     githubLink: 'https://github.com/yourusername/project2',
     demoLink: 'https://yourwebsite.com/project2',
   },
+
   {
-    title: 'Aplicación 7',
-    image: '',
-    description: 'Portafolio donde enseño mis progresos y proyectos realizados y proporciono contacto',
-    technologies: ['React', 'Tailwind', 'Symfony', 'HTML', 'CSS', 'JavaScript', 'PHP'],
+    title: 'Aplicación de control de fichajes',
+    image: '/Projects/Aplicacion_4.png',  // Cambia esto si tienes imagen para la app 4
+    description: 'This is a description of project 2.',
+    technologies: ['Symfony', 'Twig', 'MySQL', 'Docker'],
     githubLink: 'https://github.com/yourusername/project2',
     demoLink: 'https://yourwebsite.com/project2',
   },
-  {
-    title: 'Aplicación 8',
-    image: '',
-    description: 'Aplicación de cifrado-descifrado y transferencia de archivos utilizando el algoritmo criptográfico AES-256 ',
-    technologies: ['Java', 'SQLite'],
-    githubLink: 'https://github.com/yourusername/project2',
-    demoLink: 'https://yourwebsite.com/project2',
-  },
+ 
 ];
 
 export function ProjectsSection() {
@@ -91,28 +70,17 @@ export function ProjectsSection() {
     currentPage * itemsPerPage + itemsPerPage
   );
 
-  // Animaciones de rebote horizontal para los botones
   const bounceLeft = {
     animate: {
-      x: [0, -10, 0], // mueve 10px a la izquierda y regresa
-      transition: {
-        duration: 1,
-        repeat: Infinity,
-        repeatType: 'loop',
-        ease: 'easeInOut',
-      },
+      x: [0, -10, 0],
+      transition: { duration: 1, repeat: Infinity, repeatType: 'loop', ease: 'easeInOut' },
     },
   };
 
   const bounceRight = {
     animate: {
-      x: [0, 10, 0], // mueve 10px a la derecha y regresa
-      transition: {
-        duration: 1,
-        repeat: Infinity,
-        repeatType: 'loop',
-        ease: 'easeInOut',
-      },
+      x: [0, 10, 0],
+      transition: { duration: 1, repeat: Infinity, repeatType: 'loop', ease: 'easeInOut' },
     },
   };
 
@@ -123,19 +91,17 @@ export function ProjectsSection() {
           Mis <span className="text-primary">Proyectos</span>
         </motion.h2>
 
-        {/* Chevron izquierdo */}
         {currentPage > 0 && (
           <motion.button
             onClick={handlePrev}
             aria-label="Página anterior"
-            className="absolute left-[300px]  top-[420px]  transform -translate-y-1/2 z-50 cursor-pointer transition-opacity duration-300"
+            className="absolute left-[300px] top-[420px] transform -translate-y-1/2 z-50 cursor-pointer transition-opacity duration-300"
             {...bounceLeft}
           >
             <ChevronLeft className="h-10 w-10 text-primary hover:drop-shadow-[0_0_6px_#00ff88]" />
           </motion.button>
         )}
 
-        {/* Chevron derecho */}
         {currentPage < totalPages - 1 && (
           <motion.button
             onClick={handleNext}
@@ -162,11 +128,17 @@ export function ProjectsSection() {
                 className="p-6 rounded-lg shadow-lg bg-white/10 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
               >
                 <div className="relative aspect-video mb-4 rounded-lg overflow-hidden">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="object-cover w-full h-full"
-                  />
+                  {project.image ? (
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="object-cover w-full h-full"
+                    />
+                  ) : (
+                    <div className="flex items-center justify-center w-full h-full bg-gray-300 text-gray-600">
+                      Imagen no disponible
+                    </div>
+                  )}
                 </div>
                 <motion.h3
                   className="text-xl font-semibold mb-2"
@@ -242,7 +214,6 @@ export function ProjectsSection() {
                     <span>+ Info</span>
                   </motion.a>
                 </motion.div>
-
               </motion.article>
             ))}
           </motion.div>
@@ -253,10 +224,9 @@ export function ProjectsSection() {
             <motion.button
               key={index}
               onClick={() => setCurrentPage(index)}
-              className={`w-4 h-4 rounded-full transition-all duration-300 ${index === currentPage
-                  ? 'bg-primary shadow-[0_0_8px_#00ff88]'
-                  : 'bg-primary/20'
-                }`}
+              className={`w-4 h-4 rounded-full transition-all duration-300 ${
+                index === currentPage ? 'bg-primary shadow-[0_0_8px_#00ff88]' : 'bg-primary/20'
+              }`}
               whileHover={{ scale: 1.2 }}
             />
           ))}

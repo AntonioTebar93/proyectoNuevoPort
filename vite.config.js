@@ -3,14 +3,14 @@ import react from '@vitejs/plugin-react'
 import tailwindcss from "@tailwindcss/vite"
 import path from "path"
 
-// https://vite.dev/config/
-export default defineConfig({
-  plugins: [react(), tailwindcss()],
-  resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"),
-    }
-  },
-  // Configuración para GitHub Pages
-  base: '/proyectoNuevoPort/', // Reemplaza 'mi-proyecto' con el nombre de tu repositorio
+export default defineConfig(({ mode }) => {
+  return {
+    plugins: [react(), tailwindcss()],
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "./src"),
+      }
+    },
+    base: mode === 'production' ? '/proyectoNuevoPort/' : '/',
+  }
 })
