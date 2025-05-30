@@ -30,6 +30,7 @@ const projects = [
     githubLink: 'https://github.com/yourusername/project2',
     demoLink: 'https://yourwebsite.com/project2',
   },
+  
 ];
 
 export function ProjectsSection() {
@@ -70,7 +71,7 @@ export function ProjectsSection() {
           <motion.button
             onClick={handlePrev}
             aria-label="Página anterior"
-            className="absolute left-4 sm:left-[300px] top-1/2 transform -translate-y-1/2 z-50 cursor-pointer transition-opacity duration-300"
+            className="absolute left-[300px] top-[420px] transform -translate-y-1/2 z-50 cursor-pointer transition-opacity duration-300"
             {...bounceLeft}
           >
             <ChevronLeft className="h-10 w-10 text-primary hover:drop-shadow-[0_0_6px_#00ff88]" />
@@ -81,7 +82,7 @@ export function ProjectsSection() {
           <motion.button
             onClick={handleNext}
             aria-label="Página siguiente"
-            className="absolute right-4 sm:right-[300px] top-1/2 transform -translate-y-1/2 z-50 cursor-pointer transition-opacity duration-300"
+            className="absolute right-[300px] top-[420px] transform -translate-y-1/2 z-50 cursor-pointer transition-opacity duration-300"
             {...bounceRight}
           >
             <ChevronRight className="h-10 w-10 text-primary hover:drop-shadow-[0_0_6px_#00ff88]" />
@@ -90,7 +91,7 @@ export function ProjectsSection() {
 
         <div className="relative flex items-center justify-center">
           <motion.div
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 w-full"
             initial="initial"
             animate="animate"
           >
@@ -100,7 +101,7 @@ export function ProjectsSection() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="p-4 sm:p-6 rounded-lg shadow-lg bg-white/10 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
+                className="p-6 rounded-lg shadow-lg bg-white/10 hover:bg-white/20 transition-all duration-300 transform hover:scale-105 hover:shadow-xl"
               >
                 <div className="relative aspect-video mb-4 rounded-lg overflow-hidden">
                   {project.image ? (
@@ -116,14 +117,14 @@ export function ProjectsSection() {
                   )}
                 </div>
                 <motion.h3
-                  className="text-lg sm:text-xl font-semibold mb-2"
+                  className="text-xl font-semibold mb-2"
                   whileHover={{ x: 5 }}
                   transition={{ type: 'spring', stiffness: 300 }}
                 >
                   {project.title}
                 </motion.h3>
                 <motion.p
-                  className="text-white mb-4 text-sm sm:text-base"
+                  className="text-white mb-4"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.2 }}
@@ -139,7 +140,7 @@ export function ProjectsSection() {
                   {project.technologies.map((tech) => (
                     <motion.span
                       key={tech}
-                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-xs sm:text-sm"
+                      className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm"
                       whileHover={{ scale: 1.1 }}
                       whileTap={{ scale: 0.95 }}
                     >
@@ -148,7 +149,7 @@ export function ProjectsSection() {
                   ))}
                 </motion.div>
                 <motion.div
-                  className="flex flex-col sm:flex-row sm:justify-between items-start sm:items-center gap-3 mt-4"
+                  className="flex flex-wrap justify-between items-center gap-3 mt-4"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.4 }}
@@ -162,7 +163,7 @@ export function ProjectsSection() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <FaGithub className="h-5 w-5" />
-                    <span className="text-sm sm:text-base">Código</span>
+                    <span>Código</span>
                   </motion.a>
 
                   <motion.a
@@ -174,7 +175,7 @@ export function ProjectsSection() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <FaYoutube className="h-5 w-5" />
-                    <span className="text-sm sm:text-base">Demo</span>
+                    <span>Demo</span>
                   </motion.a>
 
                   <motion.a
@@ -186,7 +187,7 @@ export function ProjectsSection() {
                     whileTap={{ scale: 0.95 }}
                   >
                     <FaBookOpen className="h-5 w-5" />
-                    <span className="text-sm sm:text-base">+ Info</span>
+                    <span>+ Info</span>
                   </motion.a>
                 </motion.div>
               </motion.article>
