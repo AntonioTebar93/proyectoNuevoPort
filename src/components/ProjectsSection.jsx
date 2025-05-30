@@ -3,10 +3,12 @@ import { motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { useState } from 'react';
 
+const baseUrl = import.meta.env.BASE_URL;
+
 const projects = [
   {
     title: 'Videojuego Sackboy and the Eternal Halloween Village',
-    image: '/projects/proyecto_1.png',
+    image: `${baseUrl}projects/proyecto_1.png`,
     description: 'Proyecto Final de grado en Desarrollo de videojuegos, videojuego tipo plataformas',
     technologies: ['Unity', 'C#', 'Autodesk Maya 3D'],
     githubLink: 'https://github.com/yourusername/project1',
@@ -14,7 +16,7 @@ const projects = [
   },
   {
     title: 'Portafolio Antonio Tebar',
-    image: '/projects/proyecto_2.png',
+    image: `${baseUrl}projects/proyecto_2.png`,
     description: 'Portafolio donde enseño mis progresos y proyectos realizados y contacto',
     technologies: ['React', 'Tailwind', 'Symfony', 'HTML', 'CSS', 'JavaScript', 'PHP'],
     githubLink: 'https://github.com/yourusername/project2',
@@ -22,7 +24,7 @@ const projects = [
   },
   {
     title: 'Proyecto Spectral',
-    image: '/projects/proyecto_3.png',
+    image: `${baseUrl}projects/proyecto_3.png`,
     description: 'Aplicación de cifrado-descifrado y transferencia de archivos utilizando el algoritmo criptográfico AES-256 ',
     technologies: ['Java', 'SQLite'],
     githubLink: 'https://github.com/yourusername/project2',
@@ -30,31 +32,28 @@ const projects = [
   },
   {
     title: 'Aplicación de control de fichajes',
-    image: '/Projects/Aplicacion_4.png',  // Cambia esto si tienes imagen para la app 4
+    image: `${baseUrl}projects/Aplicacion_4.png`,
     description: 'This is a description of project 2.',
     technologies: ['Symfony', 'Twig', 'MySQL', 'Docker'],
     githubLink: 'https://github.com/yourusername/project2',
     demoLink: 'https://yourwebsite.com/project2',
   },
-
   {
     title: 'Aplicación de control de fichajes',
-    image: '/Projects/Aplicacion_4.png',  // Cambia esto si tienes imagen para la app 4
+    image: `${baseUrl}projects/Aplicacion_4.png`,
     description: 'This is a description of project 2.',
     technologies: ['Symfony', 'Twig', 'MySQL', 'Docker'],
     githubLink: 'https://github.com/yourusername/project2',
     demoLink: 'https://yourwebsite.com/project2',
   },
-
   {
     title: 'Aplicación de control de fichajes',
-    image: '/Projects/Aplicacion_4.png',  // Cambia esto si tienes imagen para la app 4
+    image: `${baseUrl}projects/Aplicacion_4.png`,
     description: 'This is a description of project 2.',
     technologies: ['Symfony', 'Twig', 'MySQL', 'Docker'],
     githubLink: 'https://github.com/yourusername/project2',
     demoLink: 'https://yourwebsite.com/project2',
   },
- 
 ];
 
 export function ProjectsSection() {

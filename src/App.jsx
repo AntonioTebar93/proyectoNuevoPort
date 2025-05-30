@@ -1,18 +1,16 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import { useState } from "react"; // solo si realmente lo usas
 import { Home } from "./pages/Home";
 import { Contact } from "./pages/Contact";
 import { About } from "./pages/About";
 import { Skills } from "./pages/Skills";
-import { Projects} from "./pages/Projects";
+import { Projects } from "./pages/Projects";
 import { NotFound } from "./pages/NotFound";
 
-
 function App() {
-  const [count, setCount] = useState(0); // puedes eliminar esto si no lo usas
+  const basename = import.meta.env.PROD ? '/proyectoNuevoPort' : '/';
 
   return (
-    <BrowserRouter basename="/proyectoNuevoPort">
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
